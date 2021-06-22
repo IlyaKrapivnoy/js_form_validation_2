@@ -6,7 +6,7 @@ const password2 = document.getElementById('password2');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    	
+    
     checkInputs();
 });
 
@@ -19,6 +19,8 @@ function checkInputs() {
     if(usernameValue === '') {
         // add error class
         setErrorFor(username, 'Username cannot be blank');
+    } else if (usernameValue.length <= 3) {
+        setErrorFor(username, 'Username cannot be shorter than 4 characters');
     } else {
         // add success class
         setSuccessFor(username);
