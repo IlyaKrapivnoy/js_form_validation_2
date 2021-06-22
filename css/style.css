@@ -87,7 +87,7 @@ body {
 }
 
 .form-control.error small {
-    
+    visibility: visible;
 }
 
 .form button {
