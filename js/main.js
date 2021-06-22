@@ -40,6 +40,16 @@ function checkInputs() {
         setSuccessFor(password);
     }
 
+    if(password2Value === '') {
+        setErrorFor(password2, 'Password cannot be blank');
+    } else if(password2Value.length <= 6) {
+        setErrorFor(password2, 'Password shoiuld be longer than 6 characters');
+    } else if (passwordValue !== password2Value) {
+        setErrorFor(password2, 'Password does not match');
+    } else {
+        setSuccessFor(password2);
+    }
+
 }
 
 function setErrorFor(input, message) {
