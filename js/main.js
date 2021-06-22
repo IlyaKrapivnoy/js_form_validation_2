@@ -25,13 +25,20 @@ function checkInputs() {
     }
 
     if(emailValue === '') {
-		setErrorFor(email, 'Email cannot be blank');
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'Not a valid email');
-	} else {
-		setSuccessFor(email);
-	}
+        setErrorFor(email, 'Email cannot be blank');
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(email, 'Not a valid email');
+    } else {
+        setSuccessFor(email);
+    }
 
+    if(passwordValue === '') {
+        setErrorFor(password, 'Password cannot be blank');
+    } else if(passwordValue.length <= 6) {
+        setErrorFor(password, 'Password shoiuld be longer than 6 characters');
+    } else {
+        setSuccessFor(password);
+    }
 
 }
 
